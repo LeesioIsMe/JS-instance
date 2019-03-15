@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/snackbar.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1000px;
+            padding: 20px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+        }
+
+        .container #showBtn {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .container .snackbar {
+            margin: 10px 0;
+            background: #000;
+            height: 0px;
+            overflow: hidden;
+            line-height: 30px;
+            color: #eee;
+            font-size: 14px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .container .snackbar .btn {
+            text-decoration: none;
+            color: rgb(0, 199, 0);
+            margin-left: 5px;
+        }
+
+        .container .snackbar.show {
+            height: 30px;
+        }
+    </style>
+    <script src="libs/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#showBtn").click(function () {
+                $("#snackbar").addClass("show");
+                var idTimeout = setTimeout(function () {
+                    $("#snackbar").removeClass("show");
+                },5000)
+
+                $("#btn").click(function () {
+                    $("#snackbar").removeClass("show");
+                    clearTimeout(idTimeout);
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <button id="showBtn" onclick="showSnackbar()">提示弹窗</button> -->
+        <button id="showBtn">提示弹窗</button>
+
+        <div class="snackbar" id="snackbar">
+            提示信息 点击进行<a class="btn" id="btn" href="javascript:void(0);">知道了</a>
+        </div>
+    </div>
+
+    <!-- <script src="js/snackbar.js"></script> -->
+</body>
+
+</html>

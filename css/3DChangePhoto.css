@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 750px;
+    margin: 100px auto;
+    height: 220px;
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid #ccc;
+    overflow: hidden;
+
+}
+
+ul {
+    list-style: none;
+}
+
+.slider ul li {
+    position: absolute;
+    top: 0;
+    left: calc(100% / 2 - 498px / 2);
+    transform-origin: left center;
+    cursor: pointer;
+    transition:1s;
+}
+
+.slider ul .p1 {
+    transform: translate3d(-570px, 0px, 0px) scale(0.81);
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.slider ul .p2 {
+    transform: translate3d(-345px, 0px, 0px) scale(0.81);
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.slider ul .p3 {
+    transform: translate3d(-125px, 0px, 0px) scale(0.81);
+    opacity: 0.8;
+    z-index: 3;
+}
+
+.slider ul .p4 {
+    transform: translate3d(0px, 0px, 0px) scale(1);
+    opacity: 1;
+    z-index: 4;
+}
+
+.slider ul .p5 {
+    transform: translate3d(220px, 0px, 0px) scale(0.81);
+    opacity: 0.8;
+    z-index: 3;
+}
+
+.slider ul .p6 {
+    transform: translate3d(440px, 0px, 0px) scale(0.81);
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.slider ul .p7 {
+    transform: translate3d(620px, 0px, 0px) scale(0.81);
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.pager {
+    font-size: 0;
+    width: 410px;
+    position: absolute;
+    left: 170px;
+    bottom: 10px;
+    z-index: 100;
+
+}
+
+.pager a {
+    display: inline-block;
+    width: 50px;
+    height: 4px;
+    background: #ccc;
+    margin-right: 10px;
+    transition:1s;
+}
+
+.pager a.current {
+    background: darkred;
+}
+
+.pager a:last-child {
+    margin: 0;
+}
+
+.btn a {
+    display: inline-block;
+    width: 50px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 85px;
+    z-index: 100;
+    display:none;
+}
+
+.btn .prev {
+    left: 10px;
+}
+
+.btn .next {
+    right: 10px;
+}
+
+.close {
+    color: #fff;
+    background: #ccc;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top:0px;
+    right:0;
+    cursor: pointer;
+    display:none;
+}

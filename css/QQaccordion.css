@@ -1,0 +1,151 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.container{
+    width:300px;
+    margin:10px 0 0  400px;
+    border:1px solid #ccc;
+    box-shadow:#ccc 0px 0px 15px;
+    font-size:14px;
+    min-height: 500px;
+    min-width: 200px;
+    max-height: 800px;
+    /* overflow-y:scroll; */
+    border-radius: 5px;
+}
+.clearfix:after{
+    clear: both;
+    content:"";
+    visibility: hidden;
+    height: 0;
+    display: block;
+}
+.list{
+    background:rgb(250,250,250);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#333;
+}
+.group>li{
+    line-height:35px;
+    /* border:1px solid #ccc; */
+    position: relative;
+}
+.group>li>span:nth-child(1){
+    display:inline-block;
+    height:35px;
+    line-height:35px;
+    width:100%;
+    padding-left:10px;
+}
+.group>li>span:hover{
+    background:#eee;
+}
+.group .more:hover{
+    background:rgb(250,250,250);
+}
+.group>li>span  i{
+    background-image: url(../images/down.png);
+    display:inline-block;
+    height:14px;
+    width:14px;
+    margin-right:5px;
+}
+.group span i.clickedI{
+    background-image: url(../images/down2.png);
+}
+.group .friends{
+    display:none;
+}
+.group .friends li:hover{
+    background:#eee;
+}
+.group .new-friends li:hover{
+    background:rgb(250,250,250);
+}
+.group .friends li{
+    height:40px;
+}
+.group .friends li img{
+    display: inline-block;
+    width:30px;
+    height:30px;
+    vertical-align: middle;
+    margin-right:10px;
+    border-radius:50%;
+}
+.group .friends li span{
+    display:inline-block;
+    height:38px;
+    line-height:38px;
+    /* border:1px solid red; */
+}
+.group .friends li a{
+    padding-left:15px;
+}
+.group .friends.show{
+    display:block;
+}
+.group .friends.show li.clicked{
+    height:50px;
+    line-height: 50px;
+    background:#eee;
+}
+
+.group .friends.show li.clicked img{
+    width:40px;
+    height:40px;
+}
+
+.new-friends{
+    height:140px;
+    overflow:hidden;
+}
+.group .new-friends li{
+    margin:10px 0 0 6px;;
+    float:left;
+    line-height: initial;
+    text-align:center;
+    width:90px;
+    /* border:1px solid red; */
+    height:120px !important;
+}
+.group .new-friends li img{
+    display:inline-block;
+    width:40px;
+    height:40px;
+}
+.group .new-friends li button{
+    padding:3px 15px;
+    border:1px solid #ccc;
+    outline: none;
+    background:#fff;
+    border-radius:3px;
+    margin-top:5px;
+}
+.name,.info{
+    font-size:12px;
+    line-height:1.5em;
+    height:1.5em;
+}
+.info{
+    color:#999;
+}
+.group .new-friends li button:hover{
+    background:rgb(246,246,246);
+}
+.more{
+    position: absolute;
+    top:0;
+    right:20px;
+    display:none;
+}
+.more a{
+    color:rgb(100,208,248);
+}

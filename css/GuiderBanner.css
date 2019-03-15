@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:#333;
+}
+.container {
+    width: 1200px;
+    margin: 100px auto;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sideBar {
+    width: 240px;
+    height: 460px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 0px;
+}
+
+.sideBar li {
+    height: 3em;
+    line-height: 3em;
+    padding: 0 35px 0 20px;
+}
+.sideBar li a{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display:block;
+}
+.sideBar li:hover{
+    background:rgba(255,255,255,0.1);
+}
+.sideBar i {
+    font-size: 20px;
+    font-weight: 700;
+    float: right;
+    margin-top: 14px;
+    color: #aaa;
+}
+
+.banner {
+    position: relative;
+    height: 460px;
+}
+
+.banner li {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pager, .btn a {
+    position: absolute;
+    z-index: 100;
+}
+
+.pager {
+    bottom: 20px;
+    right: 50px;
+}
+
+.pager a {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgb(255,255,255,0.7);
+}
+.pager a.current {
+    background: rgb(255,255,255,0.5);
+}
+.btn a{
+    display:inline-block;
+    width:50px;
+    height:80px;
+    background:rgba(0,0,0,0);
+    line-height:80px;
+    text-align:center;
+    font-size:60px;
+    top:190px;
+}
+.btn a:hover{
+    background:rgba(0,0,0,0.5);
+}
+.prev{
+    left:250px;
+    border-radius:5px 0 0 5px;
+}
+.next{
+    right:10px;
+    border-radius: 0 5px 5px 0 ;
+}
+.content {
+    width:600px;
+    position: absolute;
+    left:240px;
+    height:460px;
+    top:0;
+    background-image: url(../images/GuiderBanner/fe.png);
+    display:none;
+    padding:20px 10px;
+}

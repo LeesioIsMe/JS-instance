@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D层叠轮播</title>
+    <link rel="stylesheet" href="css/3DChangePhoto.css">
+    <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="libs/jquery.js"></script>
+    <script src="js/3DChangePhoto.js"></script>
+    <script>
+        // http://demo.lanrenzhijia.com/demo/55/5531/demo/
+        $(function () {
+            $(".container").mouseover(function () {
+                $(".btn a,.close").show(300);
+            }).mouseleave(function () {
+                $(".btn a,.close").hide(300);
+            })
+
+            function currPhoto(index) {
+                arr.unshift(arr[6]);// 先把最后一项添加到第一位
+                arr.pop();   // 再删除最后一位
+                arr.reverse();
+                $(`.slider li:nth-child(${index})`).removeClass().addClass("p4").siblings().each(function (i, p) {
+                    if (i != arr.indexOf("p4")) {
+                        $(p).removeClass().addClass(arr[i]);
+                    }
+                })
+                console.log(arr);
+            }
+            var index = 2;
+            var arr = ["p1", "p2", "p3", "p4", "p5", "p6", "p7"];
+            currPhoto(1);
+            function autoPlay() {
+                currPhoto(index);
+                $(`.pager a:nth-child(${index})`).addClass("current").siblings().removeClass("current");
+                index++;
+                if (index == $(".slider li").length + 1) {
+                    index = 1;
+                }
+                
+            }
+            var timer = setInterval(autoPlay, 3000);
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider">
+            <ul>
+                <li class="p1"><img src="images/3DChangePhoto/1.png" alt=""></li>
+                <li class="p2"><img src="images/3DChangePhoto/2.png" alt=""></li>
+                <li class="p3"><img src="images/3DChangePhoto/3.png" alt=""></li>
+                <li class="p4"><img src="images/3DChangePhoto/4.png" alt=""></li>
+                <li class="p5"><img src="images/3DChangePhoto/5.png" alt=""></li>
+                <li class="p6"><img src="images/3DChangePhoto/6.png" alt=""></li>
+                <li class="p7"><img src="images/3DChangePhoto/7.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="pager">
+            <a href="javascript:;" class="current"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+        <div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>
+        <div class="btn">
+            <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

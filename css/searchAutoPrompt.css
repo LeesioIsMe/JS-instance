@@ -1,0 +1,46 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.container{
+    width:500px;
+    margin:100px auto;
+}
+#input{
+    width:500px;
+    height:44px;
+    font-size:16px;
+    padding: 0 0 0 40px;
+    background-image: url(../images/search-autoprompt.png);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+
+    line-height:40px;
+    border:1px solid chocolate;
+}
+
+ul{
+    list-style: none;
+}
+ul li {
+    padding:0 40px;
+    background:#ddd;
+    border-bottom:1px solid #eee;
+}
+ul a{
+    display:inline-block;
+    color:#666;
+    line-height:30px;
+    text-decoration: none;
+}
+ul .header{
+    font-size:18px;
+    background:#ccc;
+}
+ul .header a{
+    cursor: default;
+}
+ul li:hover:not(.header){
+    background:#def;
+}

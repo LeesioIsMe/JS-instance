@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/selectAll.css"> -->
+    <style>
+        table{
+            width:300px;
+            border:1px solid #ccc;
+            border-collapse: collapse;
+            margin: 10px auto;
+        }
+        td,th{
+            border:1px solid #ccc;
+            line-height: 35px;
+        }
+        tr:not(:nth-child(1)){
+            /* font-size:14px; */
+            background:#f0f0f0;
+            cursor: pointer;
+        }
+
+        tr:hover{
+            background:#fafafa;
+        }
+        th{
+            background-color: #0099cc;
+            color:#fff;
+        }
+        td:nth-of-type(1){
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <table>
+            <tr class="items title">
+                <th><input type="checkbox" class="selectAll"></th>
+                <th>菜名</th>
+                <th>饭店</th>
+            </tr>
+            <tr class="items">
+                <td><input name="food" type="checkbox" class="selector"></td>
+                <td>红烧肉</td>
+                <td>家里蹲</td>
+            </tr>
+            <tr class="items">
+                <td><input name="food" type="checkbox" class="selector"></td>
+                <td>西红柿鸡蛋</td>
+                <td>家里蹲</td>
+            </tr>
+            <tr class="items">
+                <td><input name="food" type="checkbox" class="selector"></td>
+                <td>红烧狮子头</td>
+                <td>家里蹲</td>
+            </tr>
+            <tr class="items">
+                <td><input name="food" type="checkbox" class="selector"></td>
+                <td>日式肥牛</td>
+                <td>家里蹲</td>
+            </tr>
+        </table> -->
+
+    <table>
+        <tr>
+            <th><input type="checkbox" class="all"></th>
+            <th>菜名</th>
+            <th>饭店</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="single"></td>
+            <td>任胖胖</td>
+            <td>老大</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="single"></td>
+            <td>朴智妍</td>
+            <td>老二</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="single"></td>
+            <td>咸恩静</td>
+            <td>老三</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="single"></td>
+            <td>朴孝敏</td>
+            <td>老四</td>
+        </tr>
+    </table>
+    </div>
+    <script>
+        var all = document.querySelector(".all");
+        var singles = document.querySelectorAll(".single");
+        all.addEventListener("click", function () {
+            // if (all.checked == true) {
+            //     singles.forEach(function (v) {
+            //         v.checked = true;
+            //     })
+            // }else{
+            //     singles.forEach(function (v) {
+            //         v.checked = false;
+            //     })
+            // }
+
+
+            // singles.forEach(function (v) {
+            //     v.checked = all.checked;
+            // })
+
+            var that = this;
+            singles.forEach(function (v) {
+                v.checked = that.checked;
+            })
+        })
+        for(let i = 0 ; i < singles.length ; i++){
+            let single = singles[i];
+            single.onclick = function(){
+                // var selected = document.querySelectorAll(".single:checked").length;
+                // all.checked = selected == singles.length;
+
+                // var selected = document.querySelectorAll(".single:not(:checked)").length;
+                // all.checked = selected == 0;
+
+                for(let j = 0 ; j < singles.length ; j ++){
+                    let element = singles[j];
+                    if(!element.checked){
+                        all.checked = false;
+                        break;
+                    }else{
+                        all.checked = true;
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- <script src="js/selectAll.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            width: 100%;
+            height: 35px;
+            background: rgb(12, 1, 1);
+        }
+
+        .header .customer {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header .customer .personal {
+            float: right;
+        }
+
+        .header .customer .personal a {
+            color: #eee;
+            font-size: 12px;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 35px;
+            padding: 0 10px;
+        }
+
+        .header .customer .personal .username:hover {
+            color: #ccc;
+        }
+
+        .header .customer .personal .logout:hover {
+            color: rgb(253, 113, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="customer">
+            <div class="personal">
+                <a href="javascript:void(0)" class="username">欢迎：XXX进入主页</a>
+                <a href="javascript:void(0)" class="logout">退出</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var username = document.querySelector(".username");
+        var logout = document.querySelector(".logout");
+        var cookie = document.cookie;
+        console.log(cookie);
+        cookieName = cookie.substring(0, cookie.lastIndexOf("="));
+        if (cookie.lastIndexOf(";")) {
+            var cookieName = cookie.substring(cookie.lastIndexOf(";") + 2, cookie.lastIndexOf("="));
+        }
+        console.log(cookieName);
+        username.innerHTML = `欢迎：${cookieName} 进入主页`;
+
+        logout.onclick = function () {
+            username.innerHTML = `请登录`;
+            // var start = cookie.indexOf(cookieName + "=");
+            // if (start > -1) {
+            //     var end = cookie.indexOf(";", start);
+            //     if (end == -1) {
+            //         end = cookie.length;
+            //     }
+            // }
+            // cookieValue = cookie.substring(start + cookieName.length + 1, end);
+            // console.log(cookieValue);
+            var now = new Date();
+            now.setDate(now.getDate());
+            cookie = cookieName + "=" + "" + ";expires=" + now.toUTCString();
+            username.onclick = function (ev) {
+                ev.preventDefault();
+                location.href = "18.cookie记住账号.html";
+            }
+        }
+    </script>
+</body>
+
+</html>

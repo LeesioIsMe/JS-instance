@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    width:500px;
+    margin:100px auto;
+}
+table,th,td{
+    border:1px solid #ccc;
+    border-collapse: collapse;
+}
+.items{
+    height:40px;
+    line-height:40px;
+}
+
+.items td{
+    padding-left:10px;
+    color:#333;
+}
+.items td:first-child{
+    width:50px;
+}
+.items td:nth-child(2){
+    width:200px;
+}
+.items td:last-child{
+    width:100px;
+}
+.title{
+    background:rgb(0,150,255);
+    font-weight: bold;
+    color:#fff;
+}

@@ -1,0 +1,52 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.container{
+    width:500px;
+    margin:100px auto;
+}
+.openWindow{
+    padding:5px 10px;
+}
+.window{
+    border:1px solid #ccc;
+    margin:10px 0;
+    padding:20px;
+    
+    display:none;
+
+    position: relative;
+}   
+.close{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    line-height:20px;
+    text-align:center;
+    color:#666;
+    background:#eee;
+    cursor: pointer;
+
+    position:absolute;
+    right:0px;
+    top:0px;
+}
+.formgroup{
+    margin:10px 0;
+}
+.formgroup label{
+    display:inline-block;
+    width:100px;
+    text-align:right;
+}
+.formgroup input{
+    height:30px;
+    padding:0 10px;
+}
+.formgroup button{
+    margin-left:105px;
+    width:80px;
+    height:30px;
+}

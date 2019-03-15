@@ -1,0 +1,130 @@
+{
+    "recommend1": [
+        {
+            "imgSrc": "images/Xiaomi/product1.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product2.jpg",
+            "title": "小米USB-C数据线 编织线版 100cm",
+            "price": "18.9元",
+            "comment": "6276人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product3.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "1078元",
+            "comment": ""
+        },
+        {
+            "imgSrc": "images/Xiaomi/product4.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "119元",
+            "comment": ""
+        },
+        {
+            "imgSrc": "images/Xiaomi/product5.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "19.9元",
+            "comment": "354人好评"
+        }
+    ],
+    "recommend2": [
+        {
+            "imgSrc": "images/Xiaomi/product6.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product7.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product8.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product9.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product10.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        }
+    ],
+    "recommend3": [
+        {
+            "imgSrc": "images/Xiaomi/product11.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product12.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product13.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product14.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product15.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        }
+    ],
+    "recommend4": [
+        {
+            "imgSrc": "images/Xiaomi/product16.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product17.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product18.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product19.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        },
+        {
+            "imgSrc": "images/Xiaomi/product20.jpg",
+            "title": "小米蓝牙项圈耳机",
+            "price": "279元",
+            "comment": "3930人好评"
+        }
+    ]
+}

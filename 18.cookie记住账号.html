@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/CookieRemember.css">
+    <script>
+        window.onload = function () {
+            var cookie = document.cookie;
+                    console.log(cookie);
+            cookieName = cookie.substring(0, cookie.lastIndexOf("="));
+            if (cookie.lastIndexOf(";")) {
+                var cookieName = cookie.substring(cookie.lastIndexOf(";") + 2, cookie.lastIndexOf("="));
+            }
+            var statusNow = cookie.substr(cookie.length - 1, 1);
+            if (statusNow == "F") {
+                reme.classList.remove("checked");
+            } else {
+                reme.classList.add("checked");
+            }
+            if (reme.classList.contains("checked")) {
+                userName.value = cookieName;
+                password.value = "";
+                userLabel.style.display = "none";
+            } else {
+                userName.value = "";
+                password.value = "";
+                return;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <span class="logo1"></span>
+            <span class="logo2"></span>
+        </div> -->
+        <div class="loginBg">
+            <div class="loginSection">
+                <form action="" method="POST">
+                    <div class="group user">
+                        <div class="usernameIcon"></div>
+                        <input type="text" class="username" id="username">
+                        <label for="username">手机/邮箱/普通账号</label>
+                    </div>
+                    <div class="group pass">
+                        <div class="passwordIcon"></div>
+                        <input type="password" class="password" id="password">
+                        <label for="password">静态密码/动态密码</label>
+                    </div>
+                    <div class="group reme clearfix">
+                        <label>记住用户名</label>
+                        <i id="remember" class="checked"></i>
+                    </div>
+                    <div class="group">
+                        <button id="login">登录</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/CookieRemember.js"></script>
+</body>
+
+</html>

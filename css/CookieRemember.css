@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    width:1000px;
+    height:90px;
+    margin:0 auto;
+}
+.logo .logo1{
+    background-image: url(../images/Cookieimages/w_logo.jpg);
+    display:inline-block;
+    width:150px;
+    height:50px;
+    margin:16px 0 0 0;
+}
+.logo .logo2{
+    background-image: url(../images/Cookieimages/bg.png);
+    background-position: 0 -119px;
+    display:inline-block;
+    width:170px;
+    height:50px;
+    margin-left:20px;
+}
+.loginBg{
+    background-image: url(../images/Cookieimages/bgbanner.jpg);
+    height:400px;
+    position: relative;
+}
+.loginSection{
+    position: absolute;
+    top:50px;
+    right:450px;
+    padding:50px 0;
+    width:435px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    border-radius: 3px;
+    background:#fff;
+    z-index: 100;
+}
+
+
+.group {
+    width: 270px;
+    height: 41px;
+    background-image: url(../images/Cookieimages/login.jpg);
+    background-position: 0 -43px;
+    margin: 15px auto 0px;
+    background-repeat: no-repeat;
+    line-height: 41px;
+    position: relative;
+}
+
+.group .usernameIcon, .group .passwordIcon {
+    width: 36px;
+    height: 30px;
+    position: absolute;
+    /* border: 1px solid red; */
+    top: 5px;
+    left: 1px;
+    background-image: url(../images/Cookieimages/login.jpg);
+    border-right: 1px solid #ccc;
+}
+
+.group .usernameIcon {
+    background-position: -81px 0;
+}
+
+.group .passwordIcon {
+    background-position: -118px 0;
+}
+
+.group .username, .group .password {
+    margin: 0 0 0 39px;
+    height: 35px;
+    width: 230px;
+    border: none;
+    padding: 0 0 0 5px;
+    outline: none;
+    z-index: 20;
+}
+
+
+.user label, .pass label {
+    position: absolute;
+    top: 0px;
+    left: 45px;
+    z-index: 10;
+    color: #999;
+    cursor: text;
+}
+
+.group:last-child {
+    margin: 0 auto 15px;
+    background-position: 0 -211px;
+}
+
+.group:last-child button {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    text-align: center;
+    width: 270px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.reme {
+    background-image: none;
+    height: 30px;
+    line-height: 30px;
+    padding: 6px 0 0 0;
+    margin: 0 auto;
+}
+
+.reme i {
+    background-image: url(../images/Cookieimages/login.jpg);
+    background-position: -156px -17px;
+    float: right;
+    margin-top: 1px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    /* border:1px solid red; */
+}
+.reme i.checked{
+    background-position: -156px 0px;
+}
+.reme label {
+    line-height: 16px;
+    height: 16px;
+    float: right;
+    cursor: pointer;
+}

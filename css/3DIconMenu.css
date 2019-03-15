@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+}
+
+.container {
+    width: 1200px;
+    height: 182px;
+    margin: 200px auto;
+    cursor: pointer;
+    position: relative;
+    /* border:1px solid #ccc; */
+    perspective: 1000px;
+    perspective-origin: center center;
+    transition: 1s ease-out;
+}
+
+.item {
+    width: 216px;
+    height: 200px;
+    float: left;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 492px;
+    transition: 1s ease-out;
+    transform: rotateX(40deg);
+}
+
+.item span {
+    color: #222;
+}
+
+.item.current {
+    /* display: block; */
+    z-index: 100;
+    color: #fff;
+}
+
+.item .bg {
+    width: 180px;
+    height: 160px;
+    background-size: 160px 160px;
+    background-repeat: no-repeat;
+    background-position: 10px 0;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: rgb(86, 119, 219);
+    border: 1px solid #ccc;
+}
+
+.item.current .bg {
+    background: radial-gradient(circle farthest-corner, rgb(199, 199, 213), rgb(86, 119, 219));
+}
+
+.item:hover .bg{
+    background-color: #fff;
+} 
+.container:hover .item .bg {
+    box-shadow:rgb(212, 44, 228) 0px 0px 40px;
+}
+
+.container:hover .item span {
+    color: #fff;
+}
+
+.item .bg1 {
+    background-image: url(../images/3DIconMenu/organization-512.png);
+}
+
+.item .bg2 {
+    background-image: url(../images/3DIconMenu/creative_draw-512.png);
+}
+
+.item .bg4 {
+    background-image: url(../images/3DIconMenu/cloud_weather-512.png);
+}
+
+.item .bg5 {
+    background-image: url(../images/3DIconMenu/search-512.png);
+}
+
+.item span {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.item.hover {
+    position: relative;
+}
+
+.item.hover p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    line-height: 160px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

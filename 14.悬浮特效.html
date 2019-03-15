@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>ES6悬浮特效</title>
+	<meta charset="UTF-8" />
+	<script src="libs/jquery.js"></script>
+	<style>
+		.button {
+			position: relative;
+			background: chocolate;
+			padding: 1em 2.5em;
+			border: none;
+			color: white;
+			font-size: 1.2em;
+			cursor: pointer;
+			outline: none;
+			overflow: hidden;
+			border-radius: 100px;
+		}
+
+		span {
+			position: relative;
+		}
+
+		span:before {
+			content: "";
+			position: absolute;
+			left: var(--x);
+			top: var(--y);
+			/* background: radial-gradient(center, shape size, start-color, ..., last-color); */
+			background: radial-gradient(circle closest-side, rgb(40, 0, 40), transparent);
+			border-radius: 50%;
+			transform: translate(-50%, -50%);
+			transition: width .2s ease, height .2s ease;
+		}
+
+		span:hover:before {
+			width: 400px;
+			height: 400px;
+		}
+	</style>
+</head>
+
+<body>
+	<button class="button"><span>Plase call me garbage.</span></button>
+
+	<!-- radial-gradient径向渐变效果对比 -->
+
+	<!-- <style>
+		div{
+			border:1px solid blue;
+		}
+	</style>
+	<div style="width:100px;height:100px;background: radial-gradient(circle closest-side, black, transparent);"></div>
+	circle closest-side, black, transparent
+	<div style="width:100px;height:100px;background: radial-gradient(circle closest-corner, black, transparent);"></div>
+	circle closest-corner, black, transparent
+	<div style="width:100px;height:100px;background: radial-gradient(circle farthest-side, black, transparent);"></div>
+	circle farthest-side, black, transparent
+	<div style="width:100px;height:100px;background: radial-gradient(circle farthest-corner, black, transparent);"></div>
+	circle farthest-corner, black, transparent -->
+</body>
+
+</html>
+<script>
+	var btn = document.querySelector(".button");
+	btn.addEventListener("mousemove", function (e) {
+		var x = e.pageX - e.target.offsetLeft;
+		var y = e.pageY - e.target.offsetTop;
+		e.target.style.setProperty("--x", `${x}px`);
+		e.target.style.setProperty("--y", `${y}px`);
+	})
+
+	/* $(".button").mousemove((e) => {
+		var x = e.pageX - $(e.target).offset().left;
+		var y = e.pageY - $(e.target).offset().top;
+		$(e.target).css({
+			"--x": `${x}px`,
+			"--y": `${y}px`
+		})
+	}) */
+</script>

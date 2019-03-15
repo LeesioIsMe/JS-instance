@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>导航 + banner轮播</title>
+    <link rel="stylesheet" href="css/GuiderBanner.css">
+    <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="libs/jquery.js"></script>
+    <script src="js/GuiderBanner.js"></script>
+    <script>
+        $(function () {
+            $(".sideBar li").mouseover(function () {
+                var index = $(this).index();
+                $(".content").each(function (i, c) {
+                    if (i == index) {
+                        $(c).show();
+                    } else {
+                        $(c).hide();
+                    }
+                })
+            }).mouseleave(function () {
+                $(".content").each(function (i, c) {
+                    $(c).hide();
+                })
+            })
+
+            showPhoto(1);
+            function showPhoto(index) {
+                $(`.banner li:nth-child(${index}`).show().siblings().hide();
+                $(`.pager a:nth-child(${index})`).addClass("current").siblings().removeClass("current");
+            }
+
+            function autoPlay() {
+                showPhoto(index);
+                index++;
+                if (index == $(".banner ul li").length + 1) {
+                    index = 1;
+                }
+            }
+            var index = 2;
+            var timer = setInterval(autoPlay, 2000);
+
+            $(".prev").click(function () {
+                clearInterval(timer);
+                var currentIndex = $(".pager a[class='current']").index() + 1;
+                index = currentIndex - 1;
+                if (index == 0) {
+                    index = $(".banner ul li").length;
+                }
+                showPhoto(index);
+                timer = setInterval(autoPlay,2000);
+            })
+            $(".next").click(function () {
+                clearInterval(timer);
+                var currentIndex = $(".pager a[class='current']").index() + 1;
+                index = currentIndex + 1;
+                if (index == $(".banner ul li").length + 1) {
+                    index = 1;
+                }
+                showPhoto(index);
+                timer = setInterval(autoPlay,2000);
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sideBar">
+            <ul>
+                <li><a href="javascript:;">手机、配件 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="javascript:;">电脑<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="javascript:;">家用电器<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="javascript:;">家具<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+            </ul>
+            <div class="content phone">
+                111111111111111111
+            </div>
+            <div class="content computer">
+                222222222222222222
+            </div>
+            <div class="content electric">
+                333333333333333333
+            </div>
+            <div class="content furniture">
+                444444444444444444
+            </div>
+        </div>
+        <div class="banner">
+            <ul>
+                <li><img src="images/GuiderBanner/bg1.jpg" alt="img1"></li>
+                <li><img src="images/GuiderBanner/bg2.jpg" alt="img2"></li>
+                <li><img src="images/GuiderBanner/bg3.jpg" alt="img3"></li>
+            </ul>
+            <div class="pager">
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+            </div>
+            <div class="btn">
+                <a href="javascript:;" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                <a href="javascript:;" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

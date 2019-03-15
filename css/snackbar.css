@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container {
+    width:1000px;
+    padding:20px;
+    margin:100px auto;
+    border:1px solid #ccc;
+}
+.container #showBtn{
+    height:40px;
+    line-height: 40px;
+    padding:0 10px;
+    outline: none;
+    cursor: pointer;
+}
+.container .snackbar{
+    margin: 10px 0;
+    background:#000;
+    height:0px;
+    overflow:hidden;
+    line-height:30px;
+    color:#eee;
+    font-size:14px;
+    text-align:center;
+    transition:all 0.3s;
+}
+.container .snackbar .btn{
+    text-decoration: none;
+    color:rgb(0,199,0);
+    margin-left:5px;
+}
+.container .snackbar.show{
+    height:30px;
+}

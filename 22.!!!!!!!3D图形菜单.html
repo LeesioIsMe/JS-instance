@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D图形菜单</title>
+    <link rel="stylesheet" href="css/3DIconMenu.css">
+    <script src="libs/jquery.js"></script>
+    <script src="js/3DIconMenu.js"></script>
+    <script>
+        /* 
+            思路：悬浮之后让每个元素的位置发生改变。用perspectiv:1000px把视角的距离拉远，用视角角度perspectiv把视点调整到底部，通过transform:rotate(40deg)将样式设置成倾斜的感觉
+        */
+        $(function () {
+            function calcPosition(i, item) {
+                var x = i * (216 + 30);
+                $(item).css({
+                    left: `${x}px`
+                })
+            }
+            $(".container").mouseover(function () {
+                $(".item").each(function (i, item) {
+                    calcPosition(i, item);
+                    $(item).css({
+                        transform: "rotateX(0)"
+                    })
+                    if (i == 2) {
+                        $(item).children(".bg").css({
+                            backgroundImage: "url(images/3DIconMenu/app_window-512.png)",
+                            backgroundSize: "160px 160px",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "10px 0",
+                            backgroundColor: "rgb(86, 119, 219)"
+                        }).siblings("p").css("color", "transparent")
+                        $(item).mouseover(function () {
+                            $(this).children(".bg").css({
+                                backgroundColor: "#fff !important"
+                            })
+                        }).mouseleave(function () {
+                            $(this).children(".bg").css({
+                                backgroundColor: "rgb(86, 119, 219)"
+                            })
+                        })
+                    }
+                })
+            }).mouseleave(function () {
+                $(".item").each(function (i, item) {
+                    calcPosition(2, item);
+                    $(item).css({
+                        transform: "rotateX(40deg)"
+                    })
+                    if (i == 2) {
+                        $(item).children(".bg").css({
+                            background: "radial-gradient(circle farthest-corner, rgb(199, 199, 213),rgb(86, 119, 219))",
+                        })
+                    }
+                }).children("p").css("color", "#fff")
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="item hosting">
+                <div class="bg bg1"></div>
+                <span>Hosting</span>
+            </div>
+            <div class="item web">
+                <div class="bg bg2"></div>
+                <span>Web Design</span>
+            </div>
+            <div class="item hover current">
+                <div class="bg bg3"></div>
+                <p>Hover me</p>
+                <span>Frontend Development</span>
+            </div>
+            <div class="item backend">
+                <div class="bg bg4"></div>
+                <span>Backend Development</span>
+            </div>
+            <div class="item seo">
+                <div class="bg bg5"></div>
+                <span>SEO</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

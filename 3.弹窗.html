@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/PopupWindow.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <button type="button" id="openWindow" class="openWindow">登录界面展示</button>
+
+        <div class="window" id="window">
+            <!-- 关闭窗口按钮 -->
+            <span class="close" id="close">X</span>
+
+            <form action="#" method="post">
+                <div class="formgroup">
+                    <label for="username">用户名：</label>
+                    <input type="text" id="username">
+                </div>
+
+                <div class="formgroup">
+                    <label for="password">密码：</label>
+                    <input type="password" id="password">
+                </div>
+
+                <div class="formgroup">
+                    <button type="submit">登录</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        var openWindow = document.querySelector("#openWindow");
+        var myWindow = document.querySelector("#window");
+        var close = document.querySelector("#close");
+        
+        // 为显示按钮添加单击事件
+        openWindow.onclick = function () {
+            myWindow.style.display = "block";
+        }
+        
+        // 为关闭按钮添加单击事件
+        close.onclick = function () {
+            myWindow.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
